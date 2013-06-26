@@ -7,17 +7,17 @@ var server = net.createServer(function(sock) {
     console.log('received ', data.length, ' bytes');
     var parser = new jParser(new jDataView(data), {
       header: {
-	      len         : 'uint32',
-	      gver        : 'int16',
-	      feedback    : 'int16',
-	      msgid       : 'uint32',
+        len         : 'uint32',
+        gver        : 'int16',
+        feedback    : 'int16',
+        msgid       : 'uint32',
 
-	      bver        : 'uint32',
-	      fieldCount  : 'uint32',
-	      recordCount : 'uint32',
-	      metaCount   : 'uint32',
-	      priority    : 'uint32',
-	      statusCode  : 'uint32',
+        bver        : 'uint32',
+        fieldCount  : 'uint32',
+        recordCount : 'uint32',
+        metaCount   : 'uint32',
+        priority    : 'uint32',
+        statusCode  : 'uint32',
 
         timeLeft    : 'float64',
       },
